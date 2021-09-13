@@ -1,11 +1,9 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Editor from './Editor'
 
-const CodeEditor = () => {
+const CodeEditor = (props) => {
 
-    const [html,setHtml] = useState('')
-    const [css,setCss] = useState('')
-    const [js,setJs] = useState('')
+    const {html,setHtml,css,setCss,js,setJs} = props
 
     return (
         <div className='code-editor-container'>
@@ -23,7 +21,7 @@ const CodeEditor = () => {
             />
             <Editor
                 language='javascript'
-                displayName='JavaScript'
+                displayName='Js'
                 value={js}
                 onChange={setJs}
             />
