@@ -4,6 +4,8 @@ import Editor from './Editor'
 const CodeEditor = () => {
 
     const [html,setHtml] = useState('')
+    const [css,setCss] = useState('')
+    const [js,setJs] = useState('')
 
     return (
         <div className='code-editor-container'>
@@ -14,10 +16,16 @@ const CodeEditor = () => {
                 onChange={setHtml}
             />
             <Editor
-
+                language='css'
+                displayName='Css'
+                value={css}
+                onChange={setCss}
             />
             <Editor
-
+                language='javascript'
+                displayName='JavaScript'
+                value={js}
+                onChange={setJs}
             />
         </div>
     )
