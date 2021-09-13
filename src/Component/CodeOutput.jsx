@@ -12,7 +12,7 @@ const CodeOutput = (props) => {
                 <style>${css}</style>
                 <script>${js}</script>
             </html>
-        `)
+            `)
         },400)
         return () => clearTimeout(timeout)
     },[html,css,js])
