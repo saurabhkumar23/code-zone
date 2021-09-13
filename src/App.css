@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+body{
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.code-editor-container{
+    background-color: hsl(225,6%,25%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.code-editor-container, .code-output-container{
+    height: 50vh;
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.editor-container{
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-direction: column;
+    padding: .5rem;
+    background: hsl(225,6%,25%);
 }
 
-.App-link {
-  color: #61dafb;
+.editor-title{
+    display: flex;
+    justify-content: space-between;
+    background: hsl(225,6%,13%);
+    color: white;
+    padding: .5rem .5rem .5rem 1rem;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* overwritng library class */
+.CodeMirror{
+    height: 100% !important;
+}
+
+.code-mirror-wrapper{
+    flex-grow: 1;
+    overflow: hidden;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
 }
