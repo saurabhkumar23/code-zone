@@ -13,7 +13,7 @@ const CodeOutput = (props) => {
                 <script>${js}</script>
             </html>
         `)
-        },300)
+        },400)
         return () => clearTimeout(timeout)
     },[html,css,js])
 
