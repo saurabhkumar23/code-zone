@@ -49,6 +49,7 @@ body{
 /* overwritng library class */
 .editor-container.collapsed .CodeMirror-scroll{
     position: absolute;
+    overflow: hidden !important;
 }
 
 .expand-collapse-btn{
