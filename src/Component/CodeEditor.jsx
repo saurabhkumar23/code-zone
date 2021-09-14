@@ -15,13 +15,13 @@ const CodeEditor = (props) => {
             />
             <Editor
                 language='css'
-                displayName='Css'
+                displayName='CSS'
                 value={css}
                 onChange={setCss}
             />
             <Editor
                 language='javascript'
-                displayName='Js'
+                displayName='JSS'
                 value={js}
                 onChange={setJs}
             />
