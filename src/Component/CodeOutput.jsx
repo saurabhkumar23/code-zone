@@ -38,7 +38,7 @@ const CodeOutput = (props) => {
                 srcDoc={srcDoc}
                 title='output'
                 sandbox='allow-scripts'
-                frameBorder='20'
+                frameBorder='0'
                 width='100%'
                 height='100%'
             />
