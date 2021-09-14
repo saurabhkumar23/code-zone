@@ -2,7 +2,16 @@ import React,{useEffect} from 'react'
 
 const CodeOutput = (props) => {
 
-    const {html,css,js,srcDoc,setSrcDoc} = props
+    const {html,css,js,srcDoc,setSrcDoc,setHtml,setCss,setJs} = props
+
+    useEffect(() => {
+        if(JSON.parse(localStorage.getItem('codeData')) != null){
+            let codeData = JSON.parse(localStorage.getItem('codeData'))
+            setHtml(codeData.html)
+            setCss(codeData.css)
+            setJs(codeData.js)
+        }
+    },[])
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -13,6 +22,12 @@ const CodeOutput = (props) => {
                 <script>${js}</script>
             </html>
             `)
+            let codeData = {
+                'html' : html,
+                'css' : css,
+                'js' : js
+            }
+            localStorage.setItem('codeData',JSON.stringify(codeData))
         },400)
         return () => clearTimeout(timeout)
     },[html,css,js])
