@@ -10,16 +10,6 @@ function App() {
     const [js,setJs] = useState('')
     const [srcDoc,setSrcDoc] = useState('')
 
-    useEffect(() => {
-        console.log('app useffect')
-        if(localStorage.getItem('codeData') != null){
-            let codeData = JSON.parse(localStorage.getItem('codeData'))
-            console.log(codeData)
-        }
-        
-        // setHtml(codeData.html)
-    },[])
-
 	return (
 		<div>
 			<CodeEditor html={html} setHtml={setHtml} css={css} setCss={setCss} js={js} setJs={setJs}/>
