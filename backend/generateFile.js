@@ -9,12 +9,12 @@ if(!fs.existsSync(dirCodes)){
 }
 
 // generate file
-const generateFile = (format,code) => {
+const generateFile = async (format,code) => {
     // create file as jfj12h4u12guhhin57.cpp and store in on dirCodes folder
     const jobId = uuid()
-    const filename = `${jobId}${format}`
+    const filename = `${jobId}.${format}`
     const filePath = path.join(dirCodes,filename)
-    await fs.writeFileSync(filePath,content)
+    await fs.writeFileSync(filePath,code)
     return filePath
 }
 
